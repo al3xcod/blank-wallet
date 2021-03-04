@@ -1,0 +1,72 @@
+@import '../../styles';
+
+.send {
+  height: 100vh;
+
+  section.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-weight: 500;
+    background: #d4e1f8;
+    box-sizing: border-box;
+    height: 66px;
+  }
+
+  section.content {
+    padding: 20px 20px;
+    box-sizing: border-box;
+    height: calc(100% - 130px);
+
+    @include sm {
+      padding: 10px 10px;
+      height: calc(100% - 126px);
+    }
+
+    .input {
+      margin-bottom: 20px;
+    }
+  }
+
+  section.actions {
+    width: 100%;
+    border-top: 1px solid #c2c8d2;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+
+    @include sm {
+      padding: 10px 10px;
+    }
+
+    .button {
+      max-width: 200px;
+      height: 40px;
+
+      &:first-child {
+        margin-right: 20px;
+
+        @include sm {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @include sm {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+
+      .button {
+        max-width: initial;
+      }
+    }
+  }
+}

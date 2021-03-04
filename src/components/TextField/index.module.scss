@@ -1,0 +1,19 @@
+body {
+  .input {
+    font-family: system-ui;
+
+    input {
+      font-family: system-ui;
+    }
+
+    :global(.MuiInput-underline:before),
+    :global(.MuiInput-underline:after) {
+      border-bottom: 1px solid #a5a5a5 !important;
+    }
+
+    :global(.MuiFormLabel-root) {
+      color: #a5a5a5;
+      font-weight: 300;
+    }
+  }
+}

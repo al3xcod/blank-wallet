@@ -1,0 +1,48 @@
+@import '../../styles';
+
+.confirm {
+  height: 100vh;
+
+  section.content {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: calc(100% - 48px);
+    background: #d4e1f8;
+
+    .icon {
+      svg {
+        width: 30px !important;
+        height: 20px;
+      }
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: -0.8px;
+    }
+
+    .comment {
+      color: #8297bb;
+      margin: 20px 0;
+    }
+  }
+
+  section.actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+    .button {
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 0;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import '../../styles';
+
+.wrapper {
+  padding: 0;
+  height: 100vh;
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    small {
+      color: #777;
+    }
+  }
+
+  section.header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: #fff;
+    font-family: system-ui;
+    position: sticky;
+    top: 0;
+
+    .flex {
+      align-items: flex-start;
+      color: #212c3f;
+
+      small {
+        color: #697da0;
+        font-family: monospace;
+        font-size: 16px;
+      }
+    }
+  }
+
+  section.center {
+    background: #d4e1f8;
+    min-height: 200px;
+    display: flex;
+    position: sticky;
+    top: 66px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 30px;
+
+    .flex {
+      color: #0c306d;
+      font-weight: bold;
+
+      small {
+        font-weight: 200;
+        font-size: 18px;
+        color: #93a9ce;
+      }
+    }
+
+    .send {
+      margin-top: 20px;
+      background: #276add;
+      color: white;
+
+      & + span {
+        margin-top: 10px;
+        color: #292929;
+        font-size: 14px;
+      }
+    }
+  }
+
+  section.transactions {
+    @include sm {
+      padding: 10px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        border-bottom: 1px solid #d8e5fc;
+
+        .flex {
+          &:first-child {
+            align-items: flex-start;
+          }
+
+          &:last-child {
+            align-items: flex-end;
+          }
+        }
+
+        & > div {
+          display: flex;
+          svg {
+            width: 30px;
+            margin-right: 20px;
+          }
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+}
